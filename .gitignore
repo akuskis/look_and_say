@@ -1,0 +1,9 @@
+#
+# Temporary objects
+#
+build
+
+#
+# IDE related
+#
+.idea
