@@ -20,4 +20,9 @@ TEST_P(LookAndSayTestFixture, getLength_shouldReturnLength)
 
 INSTANTIATE_TEST_CASE_P(getLengthTests, LookAndSayTestFixture,
                         ::testing::Values(TestCase{0, 0}, TestCase{1, 1}, TestCase{2, 2}, TestCase{3, 2},
-                                          TestCase{30, 7414}));
+                                          TestCase{30, 4462}));
+
+TEST(LookAndSayTest, getSequence)
+{
+    ASSERT_EQ(look_and_say::getSequence(15), "311311222113111231131112132112311321322112111312211312111322212311322113212221");
+}

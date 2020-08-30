@@ -13,7 +13,7 @@ struct Sequence
     std::vector<uint8_t> evolve_into;
 };
 
-std::array<Sequence, 97> sequences{Sequence{"", {93}},
+std::array<Sequence, 101> sequences{Sequence{"", {93}},
                                    {"1112", {63}},
                                    {"1112133", {64, 62}},
                                    {"111213322112", {65}},
@@ -109,13 +109,13 @@ std::array<Sequence, 97> sequences{Sequence{"", {93}},
                                    {"1", {94}},
                                    {"11", {95}},
                                    {"21", {96}},
-                                   {"1211", {1, 95}}};
-} // namespace
+                                   {"1211", {97}},
+                                   {"111221", {98}},
+                                   {"312211", {99}},
+                                   {"13112221", {100}},
+                                   {"1113213211", {83, 9}}};
 
-
-namespace look_and_say
-{
-uint64_t getLengthOfSequence(uint32_t sequence_number)
+std::list<uint8_t> getIndices(uint32_t const sequence_number)
 {
     std::list<uint8_t> indices{0};
     for (uint32_t i = 0; i < sequence_number; ++i)
@@ -129,10 +129,32 @@ uint64_t getLengthOfSequence(uint32_t sequence_number)
         std::swap(indices, temporary);
     }
 
+    return indices;
+}
+} // namespace
+
+
+namespace look_and_say
+{
+uint64_t getLengthOfSequence(uint32_t const sequence_number)
+{
+    auto const indices = getIndices(sequence_number);
+
     uint64_t length = 0;
     for (auto const index : indices)
         length += sequences[index].sequence.length();
 
     return length;
+}
+
+std::string getSequence(uint32_t const sequence_number)
+{
+    auto const indices = getIndices(sequence_number);
+
+    std::string seq;
+    for (auto const index : indices)
+        seq.append(sequences[index].sequence);
+
+    return seq;
 }
 } // namespace look_and_say
