@@ -18,5 +18,6 @@ TEST_P(LookAndSayTestFixture, getLength_shouldReturnLength)
     ASSERT_EQ(look_and_say::getLengthOfSequence(GetParam().sequence_number), GetParam().expected_length);
 }
 
-INSTANTIATE_TEST_CASE_P(LeapYearTests, LookAndSayTestFixture,
-                        ::testing::Values(TestCase{1, 1}, TestCase{2, 2}, TestCase{3, 2}));
+INSTANTIATE_TEST_CASE_P(getLengthTests, LookAndSayTestFixture,
+                        ::testing::Values(TestCase{0, 0}, TestCase{1, 1}, TestCase{2, 2}, TestCase{3, 2},
+                                          TestCase{30, 7414}));
