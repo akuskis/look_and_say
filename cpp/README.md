@@ -1,6 +1,6 @@
 # look_and_say
 
-Example of solution.
+Example of solution on C++.
 
 ## Getting Started
 
@@ -17,6 +17,13 @@ cd build
 Build project:
 ```bash
 cmake .. && make
+```
+
+### Run tests
+
+Run tests from (build folder):
+```bash
+./src/tests/look_and_say_tests
 ```
 
 ## Built With
