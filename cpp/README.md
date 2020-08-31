@@ -31,4 +31,3 @@ Run tests from (build folder):
 * [CMake](https://cmake.org/) - tool for managing build process
 * [Hunter](https://github.com/cpp-pm/hunter) - package manager
 * [GoogleTests](https://github.com/google/googletest) - test framework
-
