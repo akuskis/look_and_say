@@ -135,7 +135,7 @@ std::list<uint8_t> getIndices(uint32_t const sequence_number)
 } // namespace
 
 
-namespace look_and_say
+namespace look_and_say::cosmo
 {
 uint64_t getLengthOfSequence(uint32_t const sequence_number)
 {
@@ -158,4 +158,4 @@ std::string getSequence(uint32_t const sequence_number)
 
     return seq;
 }
-} // namespace look_and_say
+} // namespace look_and_say::cosmo

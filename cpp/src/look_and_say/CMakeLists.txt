@@ -3,7 +3,10 @@ project(look_and_say)
 #
 # Sources
 #
-set(SOURCES look_and_say.cpp)
+set(SOURCES
+        common/look_and_say.cpp
+        cosmo/look_and_say.cpp
+        )
 
 #
 # Library
