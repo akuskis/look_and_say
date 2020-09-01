@@ -4,6 +4,7 @@ class Sequence:
         self.evolve_into = evolve_into
 
 
+# according to Cosmological Theorem (https://mathworld.wolfram.com/CosmologicalTheorem.html)
 SEQUENCES = [Sequence("", [93]),
              Sequence("1112", [63]),
              Sequence("1112133", [64, 62]),

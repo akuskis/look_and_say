@@ -13,6 +13,7 @@ struct Sequence
     std::vector<uint8_t> evolve_into;
 };
 
+// according to Cosmological Theorem (https://mathworld.wolfram.com/CosmologicalTheorem.html)
 std::array<Sequence, 101> const sequences{Sequence{"", {93}},
                                           {"1112", {63}},
                                           {"1112133", {64, 62}},
