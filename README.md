@@ -11,3 +11,10 @@ Sub folders contains additional Readme files and sources.
 Solution contains common approach and approach based on [Cosmological Theorem](https://mathworld.wolfram.com/CosmologicalTheorem.html)
 
 Detailed description for this issue can be found [here](http://www.njohnston.ca/2010/10/a-derivation-of-conways-degree-71-look-and-say-polynomial/)
+
+
+Cosmo solution on Python >10 times faster than common (50 iterations of sequence #50):
+```
+Common solution: 23.883100963998004
+Cosmo solution: 1.8721128920005867
+```

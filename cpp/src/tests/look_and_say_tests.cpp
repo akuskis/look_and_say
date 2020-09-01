@@ -37,6 +37,6 @@ TEST(LookAndSayTest, getSequence)
 
 TEST(LookAndSayTest, output_of_different_implementations_is_equal)
 {
-    for (size_t i = 0; i <= 50; ++i)
+    for (size_t i = 0; i <= 70; ++i)
         ASSERT_EQ(look_and_say::common::getSequence(i), look_and_say::cosmo::getSequence(i));
 }
